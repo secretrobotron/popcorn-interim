@@ -81,6 +81,7 @@
 			font-weight: normal;
 			text-align: left;
 			padding: 0.25em 0.25em 0.25em 2em;
+			width: 15em;
 		}
 
 		table.form td {
@@ -110,6 +111,15 @@
 		table.form td > textarea {
 			height: 4em;
 		}
+
+		input[type=text], textarea {
+			border: 1px solid #444;
+			padding: 3px;
+		}
+		input[type=text]:focus, textarea:focus {
+			outline: none;
+			border: 1px solid #5890D7;
+		}
 		
 		input[type=range] {
 			width: 80%;
@@ -118,7 +128,10 @@
 		input[type=text].small {
 			width: 40px;
 		}
-		
+		.note {
+			color: #555;
+			font-style: italic;
+		}
 		.invalid {
 			background-color: #f33;
 		}
