@@ -96,11 +96,11 @@
           <tbody>
             <tr>
               <th><label for="left">Left (%):</label></th>
-              <td><input type="text" id="left"/></td>
+              <td><input type="range" min="0" max="100" step="1" id="left"/><span id="left-pos">50%</span></td>
             </tr>
             <tr>
               <th><label for="top">Top (%):</label></th>
-              <td><input type="text" id="top"/></td>
+              <td><input type="range" min="0" max="100" type="text" id="top"/><span id="top-pos">50%</span></td>
             </tr>
           </tbody>
         </table>
@@ -221,10 +221,20 @@
           type: 'time'
         },
         top: {
-          type: 'percent'
+          type: 'percent',
+          callback: function(field, value) {
+            console.log(value);
+            document.getElementById('top-pos').innerHTML = value;
+          },
+          defaultValue: "50%"
         },
         left: {
-          type: 'percent'
+          type: 'percent',
+          callback: function(field, value) {
+            console.log(value);
+            document.getElementById('left-pos').innerHTML = value;
+          },
+          defaultValue: "50%"
         },
         text: 'text',
         link: 'url',
