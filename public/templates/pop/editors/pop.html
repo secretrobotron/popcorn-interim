@@ -35,11 +35,11 @@
   <body>
 
     <div id="menu">
-      <div class="menu-item" data-content-id="time">Time</div>
-      <div class="menu-item" data-content-id="style">Style</div>
+      <div class="menu-item" data-content-id="content">Content</div>
       <div class="menu-item" data-content-id="position">Position</div>
       <div class="menu-item" data-content-id="graphics">Graphics</div>
-      <div class="menu-item" data-content-id="content">Content</div>
+      <div class="menu-item" data-content-id="style">Style</div>
+      <div class="menu-item" data-content-id="time">Time</div>
     </div>
 
     <div id="content">
@@ -77,12 +77,8 @@
               <td><textarea id="text"></textarea></td>
             </tr>
             <tr>
-              <th><label for="link">Link:</label></th>
-              <td><input type="text" id="link"/></td>
-            </tr>
-            <tr>
-              <th><label for="target">Target:</label></th>
-              <td><select id="target"></select></td>
+              <th><label for="link">Link <br /><span class="note">(e.g. http://www.google.com)</span>:</label></th>
+              <td><input type="text" id="link" var/></td>
             </tr>
           </tbody>
         </table>
@@ -96,11 +92,11 @@
           <tbody>
             <tr>
               <th><label for="left">Left (%):</label></th>
-              <td><input type="text" id="left"/></td>
+              <td><input type="range" min="0" max="100" step="1" id="left"/><span id="left-pos">50%</span></td>
             </tr>
             <tr>
               <th><label for="top">Top (%):</label></th>
-              <td><input type="text" id="top"/></td>
+              <td><input type="range" min="0" max="100" type="text" id="top"/><span id="top-pos">50%</span></td>
             </tr>
           </tbody>
         </table>
@@ -221,10 +217,18 @@
           type: 'time'
         },
         top: {
-          type: 'percent'
+          type: 'percent',
+          callback: function(field, value) {
+            document.getElementById('top-pos').innerHTML = value;
+          },
+          defaultValue: "50%"
         },
         left: {
-          type: 'percent'
+          type: 'percent',
+          callback: function(field, value) {
+            document.getElementById('left-pos').innerHTML = value;
+          },
+          defaultValue: "50%"
         },
         text: 'text',
         link: 'url',
