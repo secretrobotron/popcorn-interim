@@ -89,32 +89,14 @@ document.addEventListener( "DOMContentLoaded", function( e ){
                   "track": "Track0",
                   "name": "TrackEvent8"
               }
-          ]
-      };  
-      
-      importTrack( track1 )
-
-      //Add two random tracks
-      media.addTrack( "Track" + Math.random() );
-      media.addTrack( "Track" + Math.random() );
-
-    }
-
-      media.onReady( start );
-      
-      window.butter = butter;
-
-      //A function to import data for a track exported from butter as JSON
-      function importTrack( data ) {
-        var track = media.addTrack ( data.name );
-        for(var i=0;i<data.trackEvents.length;i++) {
-          track.addTrackEvent({
-            type: data.trackEvents[i].type,
-            popcornOptions: data.trackEvents[i].popcornOptions
-          });
-        }
+            ]
+        };  
+        //Add two random tracks
+        var m = media.addTrack( "Track" + Math.random() );
+        m.json = track1;
+        media.addTrack( "Track" + Math.random() );
       }
-
+      media.onReady( start );
     } //ready 
   }); //Butter
 }, false );
