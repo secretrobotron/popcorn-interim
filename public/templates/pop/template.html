@@ -21,15 +21,15 @@
 		
 		<script src="../../butter/butter.js" data-butter-exclude></script>
 		<script type="text/javascript" src="plugins/popcorn.pop.js"></script>
-  	<script type="text/javascript" src="plugins/popcorn.words.js"></script>
-  	<script type="text/javascript" src="template.js" data-butter-exclude></script>
-  	<script data-butter="project-data" type="application/json"></script>
+	  <script type="text/javascript" src="plugins/popcorn.words.js"></script>
+	  <script type="text/javascript" src="template.js" data-butter-exclude></script>
+	  <script data-butter="project-data" type="application/json"></script>
 
     
 		<link rel="stylesheet" href="../../butter/css/butter.ui.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<style type="text/css">
 		body {
-			background: none repeat scroll 0 0 #FFFFFF;
+			background: #000;
 			color: #333333;
 			font-family: Helvetica,Arial,sans-serif;
 			font-size: 12px;
@@ -44,6 +44,10 @@
 		/*
 			begin custom styles for Popcorn/Seriously
 		*/
+
+		video {
+			outline: none;
+		}
 
 		#scale-buttons {
 			position: fixed;
@@ -111,14 +115,9 @@
 		</style>
 	</head>
 	<body>
-		<div id="scale-buttons">
-			<button id="smaller">-</button>
-			<button id="actual-size">1x</button>
-			<button id="bigger">+</button>
-		</div>
 		<div id="video-container" class="video-js-box">
 			<video id="video" preload class="video-js" data-butter="media" controls>
-				<source src="http://videos-cdn.mozilla.net/serv/webmademovies/popcorntest.ogv" />
+				<source src="http://videos-origin.mozilla.org/serv/webmademovies/makecorn.webm" />
 			</video>
 			<div id="pop-container" data-butter="target"></div>
 		</div>
