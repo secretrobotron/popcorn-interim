@@ -1,7 +1,7 @@
 Popcorn Interim
 ===============
 
-A Temporary hosting of templates used for the alpha shown on mozillapopcorn.org:8888
+A temporary hosting of templates used for the alpha shown on mozillapopcorn.org:8888
 
 Build Prerequisites
 -------------------
@@ -16,8 +16,7 @@ Install/Use Instructions
 2. `git submodule update --init --recursive` from the root directory
 3. `cd butter`
 4. `npm install` - Installs all node dependencies
-5. `node make` - Builds CSS
-6. Switch Back to Root Directory
-7. `./build` - Builds everything else
-8. Type `localhost:8888` in your browser.
-9. Enjoy!
+5. Switch Back to Root Directory
+6. `./build` - Builds everything else
+7. Type `localhost:8888` in your browser.
+8. Enjoy!
