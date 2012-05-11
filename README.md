@@ -12,11 +12,14 @@ Build Prerequisites
 Install/Use Instructions
 ------------------------
 
-1. Fork this repo locally.
-2. `git submodule update --init --recursive` from the root directory
+1. `git clone --recursive https://github.com/mozilla/popcorn-interim.git`
+2. `cd popcorn-interim`
 3. `cd butter`
 4. `npm install` - Installs all node dependencies
-5. Switch Back to Root Directory
+5. `cd ../`
 6. `./build` - Builds everything else
-7. Type `localhost:8888` in your browser.
-8. Enjoy!
+7. `./server`
+8. Type `localhost:8888` in your browser.
+9. Press the get started button.
+10. Choose the template you want to experiment with.
+11. Enjoy!
